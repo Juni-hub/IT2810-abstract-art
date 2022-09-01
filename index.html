@@ -4,29 +4,97 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Abstract art</h1>
-<p> The artist is an ---</p>
+<h1>Sommerkveld</h1>
+<p> Artisten har tatt inspirasjon fra </p>
 
 
 <div class=" container">
-    <div class = "box">
-        <svg >
-            <circle fill="orange" cx="150" cy="100" r="50">
+    <div class = "box"  >
+        <svg width = 440px height = 400px>
+            <rect x="0" y="380" width="440" height="20" stroke="#8ec3eb" fill="#8ec3eb" stroke-width="5" transform="translate(.011 .011)"></rect>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="-30" to="0" dur="4s" repeatCount="indefinite"></animate>
             </circle>
-            <circle fill="blue" cy="100" r="20">
-            <animate attributeName="cx" from="50" to="250" dur="5s" repeatCount="indefinite"></animate>
+            <circle fill="#8ec3eb" cy="370" r="20">
+            <animate attributeName="cx" from="0" to="30" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="30" to="60" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="60" to="90" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="90" to="120" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="120" to="150" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="150" to="180" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="180" to="210" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="210" to="240" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="240" to="270" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="270" to="300" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="300" to="330" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="330" to="360" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="360" to="390" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="390" to="420" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="420" to="450" dur="4s" repeatCount="indefinite"></animate>
+            </circle>
+            <circle fill="#8ec3eb" cy="370" r="20">
+                <animate attributeName="cx" from="450" to="480" dur="4s" repeatCount="indefinite"></animate>
             </circle>
 
-            <rect x="20" y="20" width="40" height="40" stroke="orange" fill="blue" stroke-width="5" transform="translate(.011 .011)">
-            <animate attributeName = "width" from="40"  to ="80" dur="2s" begin="click" fill="freeze"></animate>
-            </rect>
+            <circle fill="#db9833" cx="440" cy="0" r="100">
+            </circle>
+
+            <path d="M100 150 A 10 10 100 0 1 120 150" 
+                style="fill: transparent;
+                    stroke: black;
+                    stroke-width: 2" />
+            <path d="M120 150 A 10 10 300 0 1 140 150" 
+                style="fill: transparent;
+                    stroke: black;
+                    stroke-width: 2" />
+
+            <path d="M160 200 A 10 10 100 0 1 180 200" 
+                    style="fill: transparent;
+                        stroke: black;
+                        stroke-width: 2" />
+            <path d="M180 200 A 10 10 300 0 1 200 200" 
+                    style="fill: transparent;
+                        stroke: black;
+                        stroke-width: 2" />
+
+
+            <rect x="20" y="20" width="40" height="40" stroke="#db9833" fill="#8ec3eb" stroke-width="5" transform="translate(.011 .011)">
+            <animate attributeName = "width" from="40"  to ="80" dur="3s" begin="click" fill="freeze"></animate>
+            </rect> 
           </svg>
 
     </div>
     <div class = "box">
-        <canvas id="myCanvas"> </canvas>
+        <canvas id="myCanvas" width = 440px height = 400px> </canvas>
         <script src="canvas.js"></script>
-    
     </div>
     
 </div>
