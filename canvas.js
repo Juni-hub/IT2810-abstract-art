@@ -1,8 +1,11 @@
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 
+var sunFill = '#db9833';
 var x = 0;
 var speed = 0.1;
+
+canvas.onmousemove=function(e){handleMouseMove(e);}
       
 // start the animation
 requestAnimationFrame(animate);
@@ -21,13 +24,13 @@ function animate(time){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // draw canvas
-    draw(x);
+    draw(x,sunFill);
 
     // request another loop of animation
     requestAnimationFrame(animate);
 }
 
-function draw(x) {
+function draw(x,sunFill) {
     const  sq = canvas.getContext('2d');
     sq.beginPath();
     sq.rect(0, 380, 440, 20);
@@ -172,13 +175,13 @@ function draw(x) {
     s16.strokeStyle = '#8ec3eb';
     s16.stroke();
 
-    const lCircle = canvas.getContext('2d');
-    lCircle.beginPath();
-    lCircle.arc(440, 0, 100, 0, 2 * Math.PI);
-    lCircle.fillStyle = '#db9833';
-    lCircle.fill();
-    lCircle.strokeStyle = '#db9833';
-    lCircle.stroke();
+    const sun = canvas.getContext('2d');
+    sun.beginPath();
+    sun.arc(440, 0, 100, 0, 2 * Math.PI);
+    sun.fillStyle = sunFill;
+    sun.fill();
+    sun.strokeStyle = sunFill;
+    sun.stroke();
 
     const half1 = canvas.getContext('2d');
     half1.beginPath();
@@ -208,3 +211,20 @@ function draw(x) {
     half4.strokeStyle = "black";
     half4.stroke();
 }
+
+function handleMouseMove(e) {    
+    mouseX=parseInt(e.clientX-offsetX);
+    mouseY=parseInt(e.clientY-offsetY);
+    var dx=mouseX-440;
+    var dy=mouseY;
+
+    // test if mouse is inside sun
+    if(dx*dx+dy*dy<100){
+        sunFill = white;
+        draw(x, sunFill);
+
+    }else{
+        sunFill = '#db9833';
+        draw(x, sunFill);
+  }
+};

@@ -1,32 +1,63 @@
 body {
-    background-color: #777799;
+    background-color: #8ec3eb;
+    text-align: center;
   }
   h1 {
-    color: blue;
-    border: 2px solid #777799;
+    color: black;
+    font-family: "Helvetica Neue";
+    text-align: center;
+
   }
   p {
-    color: red;
+    color: black;
+    font-family: "Helvetica Neue";
+    text-align: center;
+    border: 3px dotted #2a6592;
+    max-width: 910px;
+    margin:auto;
+    
   }
 
   .container {
     display: flex;
     flex-wrap: wrap;
-  }
-
-.box{
-  width: 50%;
-  height: 100vh;
-  background-color: white;
-}
-  
-  .documentation { 
-      visibility: hidden;
-      border: 2px solid #777799;
-      background-color: white;
+    gap: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    justify-content: center;
     }
 
-  .close-popup-button {
-    color: brown;
+    .box{
+    width: 440px;
+    height: 400px;
+    background-color: #2a6592;
+    text-align: center;
+    border: 2px solid #2a6592;
+    }
+
+    .sun:hover {
+        fill: white;
+        border-color: white;
+    }
+  
+  .btn { 
+      border: 2px solid #2a6592;
+      background-color: #8ec3eb;
+      text-align: center;
+      font-family: "Helvetica Neue";
+      justify-self: center;
+      font-size: 15px;
+    }
+
+    h3 {
+        color: black;
+        font-family: "Helvetica Neue";
+        text-align: center;
+    }
+
+    .content {
+        display: none;
     }
 
