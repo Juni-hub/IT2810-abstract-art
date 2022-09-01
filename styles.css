@@ -2,13 +2,13 @@ body {
     background-color: #8ec3eb;
     text-align: center;
   }
-  h1 {
+h1 {
     color: black;
     font-family: "Helvetica Neue";
     text-align: center;
 
-  }
-  p {
+}
+p {
     color: black;
     font-family: "Helvetica Neue";
     text-align: center;
@@ -16,9 +16,9 @@ body {
     max-width: 910px;
     margin:auto;
     
-  }
+}
 
-  .container {
+.container {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -27,37 +27,42 @@ body {
     margin-bottom: 30px;
     margin-top: 20px;
     justify-content: center;
-    }
+}
 
-    .box{
+.box{
     width: 440px;
     height: 400px;
     background-color: #2a6592;
     text-align: center;
     border: 2px solid #2a6592;
-    }
+}
 
-    .sun:hover {
-        fill: white;
-        border-color: white;
-    }
+.sun:hover {
+    fill: white;
+    border-color: white;
+}
   
-  .btn { 
-      border: 2px solid #2a6592;
-      background-color: #8ec3eb;
-      text-align: center;
-      font-family: "Helvetica Neue";
-      justify-self: center;
-      font-size: 15px;
-    }
+.btn { 
+    border: 2px solid #2a6592;
+    background-color: #8ec3eb;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+}
 
-    h3 {
-        color: black;
-        font-family: "Helvetica Neue";
-        text-align: center;
-    }
+h2 {
+    color: black;
+    font-family: "Helvetica Neue";
+    text-align: center;
+}
 
-    .content {
-        display: none;
-    }
+.content {
+    display: none;
+}
+
+.bird{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 2px;
+}
 

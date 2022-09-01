@@ -5,7 +5,9 @@ var sunFill = '#db9833';
 var x = 0;
 var speed = 0.1;
 
-canvas.onmousemove=function(e){handleMouseMove(e);}
+addEventListener("mousemove", (e) => {
+    handleMouseMove(e);
+  });
       
 // start the animation
 requestAnimationFrame(animate);
