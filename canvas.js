@@ -10,7 +10,7 @@ addEventListener("mousemove", (e) => {
     handleMouseMove(e);
   });
 
-  //to start animation
+//to start animation
 requestAnimationFrame(animate);
 
 function animate(){
@@ -23,121 +23,106 @@ function animate(){
 
     //draw canvas
     draw(x,sunFill);
+
     requestAnimationFrame(animate);
 }
 
 function draw(x,sunFill) {
     const  d = canvas.getContext('2d');
     d.beginPath();
-    d.rect(0, 330, 350, 20);
+    d.rect(0, 230, 250, 20);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(-30+x, 320, 20, 0, 2 * Math.PI);
+    d.arc(-30+x, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x, 320, 20, 0, 2 * Math.PI);
+    d.arc(x, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x+30, 320, 20, 0, 2 * Math.PI);
+    d.arc(x+30, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x+60, 320, 20, 0, 2 * Math.PI);
+    d.arc(x+60, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x+90, 320, 20, 0, 2 * Math.PI);
+    d.arc(x+90, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x+120, 320, 20, 0, 2 * Math.PI);
+    d.arc(x+120, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x+150, 320, 20, 0, 2 * Math.PI);
+    d.arc(x+150, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x+180, 320, 20, 0, 2 * Math.PI);
+    d.arc(x+180, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x+210, 320, 20, 0, 2 * Math.PI);
+    d.arc(x+210, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x+240, 320, 20, 0, 2 * Math.PI);
+    d.arc(x+240, 220, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
     d.stroke();
 
     d.beginPath();
-    d.arc(x+270, 320, 20, 0, 2 * Math.PI);
-    d.fillStyle = '#8ec3eb';
-    d.fill();
-    d.strokeStyle = '#8ec3eb';
-    d.stroke();
-
-    d.beginPath();
-    d.arc(x+300, 320, 20, 0, 2 * Math.PI);
-    d.fillStyle = '#8ec3eb';
-    d.fill();
-    d.strokeStyle = '#8ec3eb';
-    d.stroke();
-    
-    d.beginPath();
-    d.arc(x+330, 320, 20, 0, 2 * Math.PI);
-    d.fillStyle = '#8ec3eb';
-    d.fill();
-    d.strokeStyle = '#8ec3eb';
-    d.stroke();
-
-    d.beginPath();
-    d.arc(x+360, 320, 20, 0, 2 * Math.PI);
-    d.fillStyle = '#8ec3eb';
-    d.fill();
-    d.strokeStyle = '#8ec3eb';
-    d.stroke();
-
-    d.beginPath();
-    d.arc(350, 0, 100, 0, 2 * Math.PI);
+    d.arc(250, 0, 100, 0, 2 * Math.PI);
     d.fillStyle = sunFill;
     d.fill();
     d.strokeStyle = sunFill;
+    d.stroke();
+
+    d.beginPath();
+    d.arc(50, 100, 10, Math.PI, 0, false);
+    d.lineWidth = 2;
+    d.strokeStyle = "black";
+    d.stroke();
+
+    d.beginPath();
+    d.arc(70, 100, 10, Math.PI, 0, false);
+    d.lineWidth = 2;
+    d.strokeStyle = "black";
     d.stroke();
 
     d.beginPath();
@@ -151,18 +136,6 @@ function draw(x,sunFill) {
     d.lineWidth = 2;
     d.strokeStyle = "black";
     d.stroke();
-
-    d.beginPath();
-    d.arc(170, 200, 10, Math.PI, 0, false);
-    d.lineWidth = 2;
-    d.strokeStyle = "black";
-    d.stroke();
-
-    d.beginPath();
-    d.arc(190, 200, 10, Math.PI, 0, false);
-    d.lineWidth = 2;
-    d.strokeStyle = "black";
-    d.stroke();
 }
 
 function handleMouseMove(e) {    
@@ -170,7 +143,6 @@ function handleMouseMove(e) {
     mouseX=rect.right-parseInt(e.clientX);
     mouseY=parseInt(e.clientY)-rect.top;
     
-
     // test if mouse is inside sun
     if((Math.sqrt((mouseX)**2+(mouseY)**2))<100 && mouseX>=0 && mouseY>=0){
         sunFill = 'white';

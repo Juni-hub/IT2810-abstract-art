@@ -6,9 +6,10 @@ body {
 
 .textbox {
     border: 3px dotted #2a6592;
-    max-width: 1000px;
-    margin: auto;
+    width: max-content;
+    max-width: 90%;
     padding:10px;
+    margin:auto;
 }
 
 .container {
@@ -21,8 +22,8 @@ body {
 }
 
 .box{
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     background-color: #2a6592;
     border: 2px solid #2a6592;
 }
@@ -30,6 +31,12 @@ body {
 .sun:hover {
     fill: white;
     border-color: white;
+}
+
+.bird{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 2px;
 }
   
 .btn { 
@@ -40,11 +47,5 @@ body {
 
 .doc {
     display: none;
-}
-
-.bird{
-    fill: transparent;
-    stroke: black;
-    stroke-width: 2px;
 }
 
