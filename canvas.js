@@ -127,14 +127,7 @@ function draw(x,sunFill) {
     d.stroke();
 
     d.beginPath();
-    d.arc(x+360, 370, 20, 0, 2 * Math.PI);
-    d.fillStyle = '#8ec3eb';
-    d.fill();
-    d.strokeStyle = '#8ec3eb';
-    d.stroke();
-    
-    d.beginPath();
-    d.arc(x+360, 370, 20, 0, 2 * Math.PI);
+    d.arc(x+360, 320, 20, 0, 2 * Math.PI);
     d.fillStyle = '#8ec3eb';
     d.fill();
     d.strokeStyle = '#8ec3eb';
