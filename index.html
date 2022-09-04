@@ -8,7 +8,9 @@
 </head>
 <body>
 <h1>Sommerkveld</h1>
-<p> Kunstneren er inspirert av sene sommerkvelder på hytta </p>
+<div class="textbox">
+    <p style="margin:0px"> Kunstneren er inspirert av sene sommerkvelder på hytta </p>
+</div>
 
 <div class=" container">
     <div class = "box"  >
@@ -79,25 +81,38 @@
 </div>
 
 <button class= 'btn' onclick="showDoc()">Vis/skjul dokumentasjon</button>
-<div class="content">
-    <h2>Dokumentasjon</h2>
+<div class="doc">
+    <h2 >Dokumentasjon</h2>
   
-    <p>
-            jQuery is an open source JavaScript library 
-            that simplifies the interactions between an
-            HTML/CSS document, or more precisely the 
-            Document Object Model (DOM), and JavaScript.
-            Elaborating the terms, jQuery simplifies 
-            HTML document traversing and manipulation, 
-            browser event handling, DOM animations, 
-            Ajax interactions, and cross-browser 
-            JavaScript development.
-    </p>
+    <div class="textbox">
+        <h3> CSS Flexbox-layout</h3>
+        <p> For å få de to interaktive kunstverkene til å se bra ut ved siden av hverandre er det brukt CSS Flexbox-layout. Dette innebærer at de er sentrerte, på samme horisontale linje, har mellomrom mellom seg og at de er fleksible med tanke på størrelsen på nettleseren (vises under hverandre dersom nettleseren ikke har plass til begge ved siden av hverandre). Jeg valgte å bruke Flexbox kun til dette fordi resten av elementene på siden skal være sentrert under hverandre, noe som er lett å få til uten Flexbox. </p>
+        <p> CSS Flexbox er brukt ved å ha en container-klasse med display-egenskapen “flex”. Inni containeren er det definert hvordan forholdet mellom elementene i flexcontaineren skal fungere for eksempel at det skal være et 30px gap mellom “boxene” og at de skal wrappes under hverandre dersom det ikke er plass til begge. Under containeren er det definert en box-klasse som definerer hvordan det inni boksene skal se ut. Boxene har definert bredde og høyde slik at det alltid er plass til bildene inni.</p>
+        <p>Grunnen til bruk av CSS Flexbox istedenfor CSS Grid er fordi Flexbox fungerer godt på en-dimensjonal layout (enten en rad eller kolonne), mens Grid fungerer bedre for to-dimensjonal layout (rad og kolonne). CSS Flexbox virket derfor som det beste alternativet siden det kun skulle brukes til to objekter som skulle være på èn rad hvis det var plass eller èn kolonne hvis det kun var plass til et bilde på en rad.</p>
+        <h3> SVG i HTML</h3>
+        <p> SVG-bildet er laget ved å ha SVG-elementet direkte inne i html-koden. Inni SVG-elementet er det brukt  forhåndsdefinerte figur-elementer som sirkler og rektangler, i tillegg til path-elementer med arc-kommando som er brukt til å lage halvsirkler til måker. Hvert figur-element har definert posisjon, størrelse og farge. </p>
+        <p> For å få til animasjon av de små sirklene (bølgene) er det brukt <animate>-element innad i sirkel-elementene. I <animate>-elementet er det satt at x-posisjonen til sirkelen skal gå fra en startposisjon til sluttposisjon i løpet av fire sekunder og at animasjonen skal foregå i det uendelige.</p>
+        <p> For interaktivitet er det brukt en CSS :hover-selektor til sun-klassen som endrer fargen på solen til hvit ved mouseover.</p>
+        <h3>HTML Canvas </h3>
+        <p> For å lage Canvas-bildet er det lagt til et canvas-element i HTML-en som er referert til i canvas.js-scriptet som er scriptet der bildet blir tegnet. Scriptet inneholder funksjoner for å tegne bildet og for å utføre animasjoner.</p>
+        <p>  Draw-funksjonen tar inn farge på sola og posisjonstall som brukes til animasjon av bølgene. I funksjonen blir lerretet tegnet ved bruk av forhåndssatte som figurer som rec og arc. </p>
+        <p>For at animasjonen (bølgene) skal fungere kaller vi på animate-funksjonen med requestAnimationFrame som er en funksjon som sier til nettleseren at man ønsker å gjennomføre en animasjon. Animate-funksjonen oppdaterer posisjonstallet x ved å legge til speed som er forhåndssatt. Deretter tømmes lerretet for elementer før det blir tegnet på nytt ved et kall på draw-funksjonen. Når lerretet er tegnet, kaller animate-funksjonen på seg selv gjennom requestAnimationFrame. Slik får vi animasjon av bølgene som går i det uendelige.</p>
+        <p>For interaktivitet brukes javascript-metoden addEventListener for mousemove som kjører funksjonen handleMouseMove hver gang musen beveger seg på skjermen. Funksjonen beregner hvor musen er på skjermen og om den er inni solen ved hjelp av matematiske beregninger. Dersom musen er inni solen endres fargen på solen til hvit og dersom musen er utenfor endres fargen tilbake.</p>
+        <h3>jQuery </h3>
+        <p> jQuery er brukt på siden for å lage knappen som viser/skjuler dokumentasjonen. I jQuery-biblioteket er det en funksjon toggle() som bytter mellom hide() og show() av elementer spesifisert med en selektor. Dokumentasjonen er satt til å være av klassen doc, som er definert i CSS til å være gjemt i starten ved hjelp av display:none- egenskapen. Når knappen “Vis/skjul dokumentasjon” blir trykket på, vil funksjonen “showDoc” kjøre og denne funksjonen trigger toggle()-metoden med klassen doc som selektor. jQuery-biblioteket er hentet fra en CDN-server som er linket til i headeren. </p>
+        <h3> Cross-browser testing</h3>
+        <p>Nettsiden er testet kontinuerlig under utvikling i Safari. Her er alle elementene innenfor nettsiden og sentrert uavhengig av størrelsen på nettleseren. Knappen til “vis/skjul”-dokumentasjon fungerer også godt. Ved testing av nettsiden med ulike mobilskjermer i Chrome kom det frem at wrap-egenskapen ikke fungerte på disse mobilskjermene. For å fikse det endret jeg størrelsen på bildene (de var for store for mobilskjermene) og la til meta-informasjon i html-siden som sier at siden skal følge bredden på skjermen til enheten og zoom-level til 1. Etter dette utførte jeg cross-browser-testing igjen og her fungerte nettsiden godt på 
+        </p>
+        <h3> Viktigste informasjonskilder</h3>
+        <p> - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout"> Sammenligning CSS Grid og FlexBox og enkel bruk av Flexbox </a> </p>
+        <p> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations"> Canvas-animasjon </a> </p>
+        <p> - <a href="https://www.w3schools.com/jquery/eff_toggle.asp"> jQuery-toggle() </a> </p>
+    </div>
 </div>
   
 <script type="text/javascript">
     function showDoc() {
-        $(".content").toggle();
+        $(".doc").toggle();
     }
 </script>
 </body>

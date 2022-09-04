@@ -1,20 +1,14 @@
 body {
     background-color: #8ec3eb;
     text-align: center;
+    font-family: "Helvetica Neue";
   }
-h1 {
-    color: black;
-    font-family: "Helvetica Neue";
-    text-align: center;
-}
-p {
-    color: black;
-    font-family: "Helvetica Neue";
-    text-align: center;
+
+.textbox {
     border: 3px dotted #2a6592;
-    max-width: 910px;
-    margin:auto;
-    
+    max-width: 1000px;
+    margin: auto;
+    padding:10px;
 }
 
 .container {
@@ -30,7 +24,6 @@ p {
     width: 350px;
     height: 350px;
     background-color: #2a6592;
-    text-align: center;
     border: 2px solid #2a6592;
 }
 
@@ -42,18 +35,10 @@ p {
 .btn { 
     border: 2px solid #2a6592;
     background-color: #8ec3eb;
-    text-align: center;
-    font-family: "Helvetica Neue";
     font-size: 13px;
 }
 
-h2 {
-    color: black;
-    font-family: "Helvetica Neue";
-    text-align: center;
-}
-
-.content {
+.doc {
     display: none;
 }
 
