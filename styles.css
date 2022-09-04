@@ -6,10 +6,9 @@ body {
 
 .textbox {
     border: 3px dotted #2a6592;
-    width: max-content;
-    max-width: 90%;
     padding:10px;
-    margin:auto;
+    margin: auto;
+    max-width: 80%;
 }
 
 .container {
