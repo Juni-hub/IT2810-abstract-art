@@ -71,7 +71,7 @@
         <p>Grunnen til bruk av CSS Flexbox istedenfor CSS Grid er fordi Flexbox fungerer godt på en-dimensjonal layout (enten en rad eller kolonne), mens Grid fungerer bedre for to-dimensjonal layout (rad og kolonne). CSS Flexbox virket derfor som det beste alternativet siden det kun skulle brukes til to objekter som skulle være på èn rad hvis det var plass eller èn kolonne hvis det kun var plass til et bilde på en rad.</p>
         <h3> SVG i HTML</h3>
         <p> SVG-bildet er laget ved å ha SVG-elementet direkte inne i html-koden. Inni SVG-elementet er det brukt  forhåndsdefinerte figur-elementer som sirkler og rektangler, i tillegg til path-elementer med arc-kommando som er brukt til å lage halvsirkler til måker. Hvert figur-element har definert posisjon, størrelse og farge. </p>
-        <p> For å få til animasjon av de små sirklene (bølgene) er det brukt <animate>-element innad i sirkel-elementene. I <animate>-elementet er det satt at x-posisjonen til sirkelen skal gå fra en startposisjon til sluttposisjon i løpet av fire sekunder og at animasjonen skal foregå i det uendelige.</p>
+        <p> For å få til animasjon av de små sirklene (bølgene) er det brukt animate-element innad i sirkel-elementene. I animate-elementet er det satt at x-posisjonen til sirkelen skal gå fra en startposisjon til sluttposisjon i løpet av fire sekunder og at animasjonen skal foregå i det uendelige.</p>
         <p> For interaktivitet er det brukt en CSS :hover-selektor til sun-klassen som endrer fargen på solen til hvit ved mouseover.</p>
         <h3>HTML Canvas </h3>
         <p> For å lage Canvas-bildet er det lagt til et canvas-element i HTML-en som er referert til i canvas.js-scriptet som er scriptet der bildet blir tegnet. Scriptet inneholder funksjoner for å tegne bildet og for å utføre animasjoner.</p>
@@ -81,11 +81,12 @@
         <h3>jQuery </h3>
         <p> jQuery er brukt på siden for å lage knappen som viser/skjuler dokumentasjonen. I jQuery-biblioteket er det en funksjon toggle() som bytter mellom hide() og show() av elementer spesifisert med en selektor. Dokumentasjonen er satt til å være av klassen doc, som er definert i CSS til å være gjemt i starten ved hjelp av display:none- egenskapen. Når knappen “Vis/skjul dokumentasjon” blir trykket på, vil funksjonen “showDoc” kjøre og denne funksjonen trigger toggle()-metoden med klassen doc som selektor. jQuery-biblioteket er hentet fra en CDN-server som er linket til i headeren. </p>
         <h3> Cross-browser testing</h3>
-        <p>Nettsiden er testet kontinuerlig under utvikling i Safari. Her er alle elementene innenfor nettsiden og sentrert uavhengig av størrelsen på nettleseren. Knappen til “vis/skjul”-dokumentasjon fungerer også godt. Ved testing av nettsiden med ulike mobilskjermer i Chrome kom det frem at wrap-egenskapen ikke fungerte på disse mobilskjermene. For å fikse det endret jeg størrelsen på bildene (de var for store for mobilskjermene) og la til meta-informasjon i html-siden som sier at siden skal følge bredden på skjermen til enheten og zoom-level til 1. Etter dette utførte jeg cross-browser-testing igjen og her fungerte nettsiden godt på </p>
+        <p>Nettsiden er testet kontinuerlig under utvikling i Safari. Her er alle elementene innenfor nettsiden og sentrert uavhengig av størrelsen på nettleseren. Knappen til “vis/skjul”-dokumentasjon fungerer også godt. Ved testing av nettsiden med ulike mobilskjermer i Chrome kom det frem at wrap-egenskapen ikke fungerte på disse mobilskjermene. For å fikse det endret jeg størrelsen på bildene (de var for store for mobilskjermene) og la til meta-informasjon i html-siden som sier at siden skal følge bredden på skjermen til enheten og zoom-level til 1. Etter dette utførte jeg cross-browser-testing igjen og her fungerte nettsiden godt på alle skjermene. </p>
         <h3> Viktigste informasjonskilder</h3>
-        <p> - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout"> Sammenligning CSS Grid og FlexBox og enkel bruk av Flexbox </a> </p>
-        <p> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations"> Canvas-animasjon </a> </p>
-        <p> - <a href="https://www.w3schools.com/jquery/eff_toggle.asp"> jQuery-toggle() </a> </p>
+        <p> - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout"> CSS Grid og FlexBox </a> </p>
+        <p> - <a href="https://www.w3schools.com/graphics/svg_intro.asp"> SVG </a> </p>
+        <p> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"> Canvas </a> </p>
+        <p> - <a href="https://www.w3schools.com/jquery/default.asp"> jQuery </a> </p>
     </div>
 </div>
 <!--Show/hide documentation-->

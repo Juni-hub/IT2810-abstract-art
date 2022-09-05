@@ -140,8 +140,8 @@ function draw(x,sunFill) {
 
 function handleMouseMove(e) {    
     const rect = canvas.getBoundingClientRect()
-    mouseX=rect.right-parseInt(e.clientX);
-    mouseY=parseInt(e.clientY)-rect.top;
+    var mouseX=rect.right-parseInt(e.clientX);
+    var mouseY=parseInt(e.clientY)-rect.top;
     
     // test if mouse is inside sun
     if((Math.sqrt((mouseX)**2+(mouseY)**2))<100 && mouseX>=0 && mouseY>=0){
